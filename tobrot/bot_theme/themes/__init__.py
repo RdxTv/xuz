@@ -7,12 +7,10 @@ AVAILABLE_THEMES = {'fx-optimised-theme': 'fx_optimised', 'fx-minimal-theme': 'f
 
 def BotTheme(user_id_):
 
-    if (not BOT_THEME):
-        BOT_THEME = USER_THEMES.get(user_id_)
-
-    if BOT_THEME in AVAILABLE_THEMES.keys():
+    theme_ = USER_THEMES.get(user_id_, BOT_THEME)
+    if theme_ in AVAILABLE_THEMES.keys():
         return (AVAILABLE_THEMES.get(BOT_THEME)).TXStyle()
-    elif BOT_THEME == "fx-random-theme":
+    elif theme_ == "fx-random-theme":
         rantheme = choice(list(AVAILABLE_THEMES.values()))
         LOGGER.info(f"Random Theme Choosen : {rantheme}")
         return rantheme.TXStyle()
