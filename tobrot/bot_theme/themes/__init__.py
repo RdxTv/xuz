@@ -1,6 +1,6 @@
 from random import choice
 
-from tobrot import BOT_THEME
+from tobrot import BOT_THEME, USER_THEMES
 from tobrot.bot_theme.themes import fx_optimised, fx_minimal 
 
 AVAILABLE_THEMES = {'fx-optimised-theme': 'fx_optimised', 'fx-minimal-theme': 'fx_minimal'}
