@@ -9,7 +9,8 @@ def BotTheme(user_id_):
 
     theme_ = USER_THEMES.get(user_id_, BOT_THEME)
     if theme_ in AVAILABLE_THEMES.keys():
-        return (AVAILABLE_THEMES.get(theme_)).TXStyle()
+        fx = (AVAILABLE_THEMES.get(theme_))
+        return fx.TXStyle()
     elif theme_ == "fx-random-theme":
         rantheme = choice(list(AVAILABLE_THEMES.values()))
         LOGGER.info(f"Random Theme Choosen : {rantheme}")
