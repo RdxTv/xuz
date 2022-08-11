@@ -314,7 +314,7 @@ async def button(bot, update: CallbackQuery):
         #await update.message.edit_message_text(text=f"{status_txt}")
     elif cb_data.startswith("theme"):
         splitTheme = cb_data.split(" ")
-        user_theme, uid = splitTheme[1], splitTheme[2]
+        uid, user_theme = splitTheme[1], splitTheme[2]
         if int(update.from_user.id) == int(uid):
             USER_THEMES[uid] = user_theme
             await update.message.edit_text(
