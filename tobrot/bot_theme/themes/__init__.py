@@ -7,7 +7,7 @@ AVAILABLE_THEMES = {'fx-optimised-theme': fx_optimised, 'fx-minimal-theme': fx_m
 
 def BotTheme(user_id_):
 
-    theme_ = USER_THEMES.get(user_id_, BOT_THEME)
+    theme_ = USER_THEMES.get(str(user_id_), BOT_THEME)
     LOGGER.info(theme_)
     LOGGER.info(user_id_)
     if theme_ == "fx-optimised-theme":
