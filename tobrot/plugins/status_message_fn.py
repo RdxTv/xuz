@@ -50,7 +50,7 @@ async def upload_as_doc(client, message):
     if DB_URI:
         DatabaseManager().user_doc(uid)
         LOGGER.info("[DB] User Toggle DOC Settings Saved to Database")
-    await message.reply_text(((BotTheme()).TOGGLEDOC_MSG).format(
+    await message.reply_text(((BotTheme(uid)).TOGGLEDOC_MSG).format(
         u_men = message.from_user.mention,
         u_id = uid,
         UPDATES_CHANNEL = UPDATES_CHANNEL
@@ -62,7 +62,7 @@ async def upload_as_video(client, message):
     if DB_URI:
         DatabaseManager().user_vid(uid)
         LOGGER.info("[DB] User Toggle VID Settings Saved to Database")
-    await message.reply_text(((BotTheme()).TOGGLEVID_MSG).format(
+    await message.reply_text(((BotTheme(uid)).TOGGLEVID_MSG).format(
         u_men = message.from_user.mention,
         u_id = uid,
         UPDATES_CHANNEL = UPDATES_CHANNEL
