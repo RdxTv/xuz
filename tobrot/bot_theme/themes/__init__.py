@@ -1,9 +1,9 @@
 from random import choice
 
 from tobrot import BOT_THEME, USER_THEMES
-from tobrot.bot_theme.themes import fx_optimised, fx_minimal 
+from tobrot.bot_theme.themes import fx_optimised as fxoptimised, fx_minimal as fxminimal
 
-AVAILABLE_THEMES = {'fx-optimised-theme': fx_optimised.__name__, 'fx-minimal-theme': fx_minimal.__name__}
+AVAILABLE_THEMES = {'fx-optimised-theme': fxoptimised.__name__, 'fx-minimal-theme': fxminimal.__name__}
 
 def BotTheme(user_id_):
 
@@ -16,5 +16,5 @@ def BotTheme(user_id_):
         LOGGER.info(f"Random Theme Choosen : {rantheme}")
         return rantheme.TXStyle()
     else:
-        return fx_optimised.TXStyle()
+        return fxoptimised.TXStyle()
 
