@@ -99,6 +99,7 @@ async def theme_set(client, message):
     theme_btn = InlineKeyboardMarkup([
         [InlineKeyboardButton("fx-optimised-theme", callback_data = f"theme {user_id_} fx-optimised-theme")],
         [InlineKeyboardButton("fx-minimal-theme", callback_data = f"theme {user_id_} fx-minimal-theme")],
+        [InlineKeyboardButton("fx-random-theme", callback_data = f"theme {user_id_} fx-random-theme")],
         [InlineKeyboardButton("⛔️ Close ⛔️", callback_data = f"close")],
     ])
 
